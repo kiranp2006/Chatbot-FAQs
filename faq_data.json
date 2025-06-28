@@ -1,0 +1,42 @@
+[
+    {
+        "question": "What is Python?",
+        "answer": "Python is a high-level, interpreted programming language known for its simplicity and readability."
+    },
+    {
+        "question": "How to install Python?",
+        "answer": "You can download and install Python from the official website: https://www.python.org/downloads/"
+    },
+    {
+        "question": "What is machine learning?",
+        "answer": "Machine learning is a subset of AI that enables systems to learn and improve from experience without being explicitly programmed."
+    },
+    {
+        "question": "What is a variable in programming?",
+        "answer": "A variable is a name that refers to a value stored in memory, used to store data in a program."
+    },
+    {
+        "question": "What is Streamlit?",
+        "answer": "Streamlit is an open-source Python framework used to quickly build and share web apps for data science and machine learning."
+    },
+    {
+        "question": "How to run a Python script?",
+        "answer": "You can run a Python script using the command: python filename.py"
+    },
+    {
+        "question": "What is AI?",
+        "answer": "AI or Artificial Intelligence refers to the simulation of human intelligence in machines that are programmed to think and learn."
+    },
+    {
+        "question": "What is GitHub?",
+        "answer": "GitHub is a platform for version control and collaboration, allowing you to manage code using Git."
+    },
+    {
+        "question": "What is NLP?",
+        "answer": "NLP stands for Natural Language Processing. It's a field of AI focused on making machines understand human language."
+    },
+    {
+        "question": "What is an IDE?",
+        "answer": "An IDE (Integrated Development Environment) is a software application that provides tools for coding, debugging, and running programs."
+    }
+]
