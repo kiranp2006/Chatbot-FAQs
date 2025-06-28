@@ -11,21 +11,21 @@ with open("faq_data.json", "r") as f:
 questions = [faq['question'] for faq in faq_data]
 answers = [faq['answer'] for faq in faq_data]
 
-# Preprocessing function (no NLTK)
+# Completely NLTK-free preprocessing
 def preprocess(text):
     text = text.lower()
-    text = text.translate(str.maketrans('', '', string.punctuation))
-    tokens = text.split()
+    text = text.translate(str.maketrans('', '', string.punctuation))  # Remove punctuation
+    tokens = text.split()  # Split by whitespace
     stop_words = {'is', 'a', 'the', 'what', 'how', 'to', 'in', 'on', 'and', 'for', 'of', 'this', 'that'}
     filtered = [word for word in tokens if word not in stop_words]
     return ' '.join(filtered)
 
-# Prepare TF-IDF vectorizer
+# Vectorize the questions
 preprocessed_questions = [preprocess(q) for q in questions]
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(preprocessed_questions)
 
-# Function to find best match
+# Find best matching answer
 def get_response(user_input):
     processed_input = preprocess(user_input)
     input_vec = vectorizer.transform([processed_input])
@@ -39,11 +39,11 @@ def get_response(user_input):
 
 # Streamlit UI
 st.title("🤖 FAQ Chatbot")
-st.write("Ask any question related to Python or tech topics!")
+st.write("Ask me a question related to Python or AI!")
 
-user_question = st.text_input("You:")
+user_input = st.text_input("You:")
 
-if user_question:
-    response = get_response(user_question)
-    st.markdown(f"**Bot:** {response}")
+if user_input:
+    st.write("**Bot:**", get_response(user_input))
+
 
